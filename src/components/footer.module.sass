@@ -1,0 +1,12 @@
+@use '../styles/mixins'
+@use '../styles/variables'
+
+.footer
+    @include mixins.flexContent(flex, center, center)
+    height: 200px
+    background-color: variables.$bg-black1
+    color: #fff
+
+    span
+        font-weight: bold
+        color: variables.$color-blue1

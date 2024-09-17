@@ -1,0 +1,32 @@
+@use '../styles/mixins'
+@use '../styles/variables'
+
+.task
+    @include mixins.flexContent(flex, space-between, flex-start)
+    max-width: 400px
+    margin: 0 auto
+    border-bottom: 1px solid #ccc
+    padding: 1em
+
+.details
+    text-align: left
+
+    & h4
+        font-size: 1.2em
+        margin-bottom: 1em
+
+.actions
+    @include mixins.flexContent(flex, center, center)
+    flex-direction: column
+
+    & i
+        margin-bottom: .5em
+        font-size: 1.2em
+        cursor: pointer
+        background-color: variables.$bg-black1
+        color: #fff
+        padding: .4em
+        transition: 0.5s
+
+        &:hover
+            color: variables.$color-blue1
